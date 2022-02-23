@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% load filtres %}
+
+{% block title %}
+    {% for val in sign %}
+        {% if valHoroscope == val.zodiac %}
+            {{ val.description|split|first }}
+        {% endif %}
+    {% endfor %}
+{% endblock %}
+
+
+{% block content %}
+
+
+{% for val in sign %}
+    {% if valHoroscope == val.zodiac %}
+        <h2>{{ val.description }}</h2>
+    {% endif %}
+{% endfor %}
+
+{% endblock %}

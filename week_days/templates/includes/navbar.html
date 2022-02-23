@@ -1,0 +1,11 @@
+{% load static %}
+{% load filtres %}
+<head>
+  <link rel="stylesheet" href="{% static 'week_days/includes/navbar.css' %}">
+</head>
+<nav>
+  <a href="{% url 'weekdays_main' %}">Главная страница</a>
+        {% for val in week_days %}
+                <a href="{% url 'day-redirect' val.slug %}">{{ val.works|split|first }}</a>
+        {% endfor %}
+</nav>

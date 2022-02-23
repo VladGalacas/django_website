@@ -1,0 +1,62 @@
+
+element.style {
+}
+user agent stylesheet
+a:-webkit-any-link {
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}
+user agent stylesheet
+h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+
+}
+user agent stylesheet
+li {
+    text-align: -webkit-match-parent;
+}
+ul {
+    column-count: 1;
+    list-style-type: none;
+    background-color: #f1f1f1;
+    width: 90%;
+    max-width: 72rem;
+    border-radius: 49px;
+    margin: 3rem auto;
+    padding: 13px;
+    color: rgb(0, 0, 0);
+    font-size: 28px;
+    font-style: italic;
+    font-weight: bold;
+    margin-left: 450px;
+    word-spacing: 2cm;
+    border-width: 100px;
+    border-right: 10px;
+    padding-right: 43px;
+}
+
+h2 {
+    color: black;
+    text-align: center;
+    font-family: Geneva, Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    font-style: italic;
+    margin-left: 100px;
+}
+
+ul li {
+    text-align: center;
+    width: 100%;
+    padding: 2rem 1rem;
+}
+
+ul a:hover, ul a:active {
+  color: rgb(184, 199, 54);
+}
+
+a{
+    padding-left: 10px;
+    padding-right: 10px;
+}

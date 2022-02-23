@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ element|title }}
+{% endblock %}
+
+
+{% block content %}
+
+<ul>
+    {% for zodiac in zodiacs %}
+        <li><h2><a href="{% url 'horoscope_name' zodiac %}">{{ zodiac|title }}</a></h2></li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load filtres %}
+
+{% block title %}
+    Список дел
+{% endblock %}
+
+{% block static %}
+    <link rel="stylesheet" href="{% static 'week_days/css/info.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% include 'includes/navbar.html' only %}
+
+    <h2>Добро пожаловать в приложение «Список дел»</h2>
+    <ul>
+        {% for val in week_days %}
+                <li><a href="{% url 'day-redirect' val.days %}">{{ val.works|split|first }}</a></li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

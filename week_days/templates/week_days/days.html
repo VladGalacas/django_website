@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load filtres %}
+
+{% block title %}
+
+    {% for val in week_days %}
+        {% if val.days in day %}
+            {{ val.works|split|first }}
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}
+
+{% block static %}
+    <link rel="stylesheet" href="{% static 'week_days/css/days.css' %}">
+{% endblock %}
+
+{% block content %}
+
+{% include 'includes/navbar.html' %}
+
+    {% for val in week_days %}
+        {% if val.days in day %}
+            <h2>{{ val.works|split|first }} - список дел:</h2>
+        {% endif %}
+    {% endfor %}
+
+    {% for val in week_days %}
+        {% if val.days in day %}
+            <p>{{ val.works }}</p>
+        {% endif %}
+    {% endfor %}
+
+{% endblock %}

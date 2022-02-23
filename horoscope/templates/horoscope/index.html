@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Гороскоп
+{% endblock %}
+
+
+{% block content %}
+
+<ul>
+    {% for key in keys %}
+        <li><h2><a href="{% url 'horoscope_name' key.zodiac %}">{{ key.zodiac|title }}</a></h2></li>
+    {% endfor %}
+</ul>
+{% endblock %}
